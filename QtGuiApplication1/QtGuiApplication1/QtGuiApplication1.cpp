@@ -1,11 +1,11 @@
 #include "QtGuiApplication1.h"
 
-#include <opencv2\opencv.hpp>
+#include <opencv2/opencv.hpp>
 #include<QDebug>
 #include <iostream>
 #include <thread>
-#include <opencv2\imgproc\types_c.h>
-#include <opencv2\highgui\highgui_c.h>
+#include <opencv2/imgproc/types_c.h>
+#include <opencv2/highgui/highgui_c.h>
 #include <QImage>
 
 using namespace std;
