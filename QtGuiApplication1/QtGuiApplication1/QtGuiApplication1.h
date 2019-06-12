@@ -9,6 +9,9 @@
 #include <opencv2/highgui/highgui_c.h>
 #include <QImage>
 #include <QMutex>
+#include <Qthread>
+#include <QtCore>
+#include "ReadProcesser.h"
 
 using namespace std;
 using namespace cv;
@@ -22,14 +25,15 @@ public:
 
 
 private slots:
-	void ok();
-
+	void showImg(cv::Mat & frame);
 
 private:
 	Ui::QtGuiApplication1Class ui;
-	QImage Mat2QImg(cv::Mat cvImg);
-	VideoCapture *cap;
+	QImage Mat2QImg(const cv::Mat &cvImg);
+	
 	QImage image;
 	Mat frame;
+	QPointer<QThread> readWorkThread;
+	QPointer<ReadProcesser> readProcesser;
 };
 

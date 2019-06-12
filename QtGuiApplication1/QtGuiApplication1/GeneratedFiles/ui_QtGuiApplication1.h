@@ -27,6 +27,8 @@ public:
     QWidget *centralWidget;
     QGraphicsView *graphicsView;
     QPushButton *pushButton;
+    QPushButton *pushButton_2;
+    QPushButton *pushButton_3;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -40,10 +42,16 @@ public:
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         graphicsView = new QGraphicsView(centralWidget);
         graphicsView->setObjectName(QString::fromUtf8("graphicsView"));
-        graphicsView->setGeometry(QRect(70, 100, 256, 192));
+        graphicsView->setGeometry(QRect(70, 100, 311, 211));
         pushButton = new QPushButton(centralWidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(70, 70, 56, 17));
+        pushButton_2 = new QPushButton(centralWidget);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setGeometry(QRect(140, 70, 56, 17));
+        pushButton_3 = new QPushButton(centralWidget);
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+        pushButton_3->setGeometry(QRect(100, 40, 56, 17));
         QtGuiApplication1Class->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(QtGuiApplication1Class);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -64,7 +72,9 @@ public:
     void retranslateUi(QMainWindow *QtGuiApplication1Class)
     {
         QtGuiApplication1Class->setWindowTitle(QApplication::translate("QtGuiApplication1Class", "QtGuiApplication1", nullptr));
-        pushButton->setText(QApplication::translate("QtGuiApplication1Class", "ok", nullptr));
+        pushButton->setText(QApplication::translate("QtGuiApplication1Class", "play", nullptr));
+        pushButton_2->setText(QApplication::translate("QtGuiApplication1Class", "stop", nullptr));
+        pushButton_3->setText(QApplication::translate("QtGuiApplication1Class", "load", nullptr));
     } // retranslateUi
 
 };
