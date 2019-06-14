@@ -20,8 +20,10 @@ void ReadProcesser::work()
 	Mat frame;
 	while (true)
 	{
-		cap->read(frame);
-		if (flag) emit getResult(frame);
+		if (flag) {
+			cap->read(frame);
+			emit getResult(frame);
+		}
 		cv::waitKey(rate);
 	}
 }
